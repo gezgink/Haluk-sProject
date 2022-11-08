@@ -1,4 +1,4 @@
 package com.Xfleet.pages;
 
-public class FilterMenuPage {
+public class FilterMenuPage extends BasePage {
 }
