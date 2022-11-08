@@ -31,6 +31,19 @@ public class Login_StepDefinitions {
 
     }
 
+    @When("the user enters the driver information")
+    public void the_user_enters_the_driver_information() {
+
+        loginPage.loginUserType("Driver");
+    }
+    @Then("the user should be able to login")
+    public void the_user_should_be_able_to_login() {
+
+        loginPage.waitUntilVisibleWait(loginPage.loaderMask);
+        Assert.assertEquals("Dashboard",Driver.getDriver().getTitle());
+
+    }
+
 
 
 }

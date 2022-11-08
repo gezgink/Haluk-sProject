@@ -1,6 +1,4 @@
 Feature: Login Function
-  User Story :
-  As a user, I should be able to log in
 
   Accounts are: truck driver,sales manager, store manager
 
@@ -16,3 +14,12 @@ Feature: Login Function
       | Driver        | Quick Launchpad |
       | Sales Manager | Dashboard       |
       | Store Manager | Dashboard       |
+
+  @22
+  Scenario: Login as a driver
+    When the user enters the driver information
+    Then the user should be able to login
+
+
+
+
