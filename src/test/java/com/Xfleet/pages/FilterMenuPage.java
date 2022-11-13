@@ -17,10 +17,10 @@ public class FilterMenuPage extends BasePage {
     @FindBy(xpath = "//a[@title='Filters']")
     public WebElement filterIcon;
 
-    @FindBy (xpath = "//a[@class='add-filter-button']")
+    @FindBy(xpath = "//a[@class='add-filter-button']")
     public WebElement manageFilters;
 
-    @FindBy (xpath = "(//input[@name='multiselect_0'])[2]")
+    @FindBy(xpath = "(//input[@name='multiselect_0'])[2]")
     public WebElement tags;
 
     @FindBy(xpath = "//h3")
@@ -29,7 +29,7 @@ public class FilterMenuPage extends BasePage {
     @FindBy(xpath = "//input[@type='search']")
     public WebElement searchManage;
 
-    @FindBy (xpath = "(//label/span)[2]")
+    @FindBy(xpath = "(//label/span)[2]")
     public WebElement typeTags;
 
 
