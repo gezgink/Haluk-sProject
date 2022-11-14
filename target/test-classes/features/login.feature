@@ -15,7 +15,7 @@ Feature: Login Function
       | Sales Manager | Dashboard       |
       | Store Manager | Dashboard       |
 
-  @22
+
   Scenario: Login as a driver
     When the user enters the driver information
     Then the user should be able to login
