@@ -5,6 +5,7 @@ import com.Xfleet.pages.VehicleGeneralInfornationPage;
 import com.Xfleet.utilities.BrowserUtils;
 import com.Xfleet.utilities.ConfigurafionReader;
 import com.Xfleet.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,7 +21,6 @@ public class VehicleGeneralInformation {
     VehicleGeneralInfornationPage vehicleGeneralInfornationPage = new VehicleGeneralInfornationPage();
 
 
-
     @Then("HU_The user clicks {string} tab and {string} module")
     public void hu_theUserClickingTabAndModule(String arg0, String arg1) {
 
@@ -29,19 +29,23 @@ public class VehicleGeneralInformation {
 
     @When("HU_The user clicks vehicle")
     public void hu_theUserClickVehicle() {
-        BrowserUtils.sleep(10);
+//      vehicleGeneralInfornationPage.waitUntilVisibleWait(vehicleGeneralInfornationPage.loaderMask);
+//      Driver.getDriver().manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
+        BrowserUtils.sleep(25);
         vehicleGeneralInfornationPage.row.click();
     }
+
     @Then("HU_The user sees the General Information page")
     public void hu_theUserSeesTheGeneralInformationPage() {
         vehicleGeneralInfornationPage.waitUntilVisibleWait(vehicleGeneralInfornationPage.loaderMask);
         boolean result = vehicleGeneralInfornationPage.infoTitle.isDisplayed();
         Assert.assertTrue(result);
     }
+
     @When("HU_The user clicks Eye button")
     public void hu_theUserClicksEyeButton() {
 
-        BrowserUtils.sleep(10);
+        vehicleGeneralInfornationPage.waitUntilVisibleWait(vehicleGeneralInfornationPage.loaderMask);
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(vehicleGeneralInfornationPage.threeDot).perform();
         vehicleGeneralInfornationPage.eye.click();
@@ -58,4 +62,22 @@ public class VehicleGeneralInformation {
     public void hu_theUserLogsInAsAApplication(String user) {
         vehicleGeneralInfornationPage.loginUserType(user);
     }
+
+    @And("HU_The user sees Edit, Delete and Add Event buttons on General Information page")
+    public void hu_theUserSeesEditDeleteAndAddEventButtonsOnGeneralInformationPage() {
+        Assert.assertTrue(vehicleGeneralInfornationPage.deleteButton.isDisplayed());
+        Assert.assertTrue(vehicleGeneralInfornationPage.editButton.isDisplayed());
+        Assert.assertTrue(vehicleGeneralInfornationPage.addEventButton.isDisplayed());
+    }
+
+    @And("HU_The user doesn't see Edit, Delete and Add Event buttons on General Information page")
+    public void theUserDoesnTSeeEditDeleteAndAddEventButtonsOnGeneralInformationPage() {
+
+        Assert.assertFalse(vehicleGeneralInfornationPage.elementVisible(vehicleGeneralInfornationPage.editButton));
+        Assert.assertFalse(vehicleGeneralInfornationPage.elementVisible(vehicleGeneralInfornationPage.deleteButton));
+        // I will write here method to handle NoSuchElementsException
+        Assert.assertFalse("Add Event Button is Displayed", vehicleGeneralInfornationPage.addEventButton.isDisplayed());
+    }
+
+
 }

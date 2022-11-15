@@ -32,4 +32,4 @@ Feature: Login xfleet application with different user type
       When HU_The user logs in as a "Driver" application
       Then HU_The user clicks "Fleet" tab and "Vehicles" module
       Then HU_The user clicks vehicle
-      And  The user doesn't see Edit, Delete and Add Event buttons on General Information page
+      And  HU_The user doesn't see Edit, Delete and Add Event buttons on General Information page

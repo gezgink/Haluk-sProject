@@ -20,4 +20,19 @@ public class VehicleGeneralInfornationPage extends LoginPage {
 
     @FindBy(xpath = "//span[text()='General Information']")
     public WebElement infoTitle;
+    @FindBy(xpath="//a[contains(text(),'Delete')]")
+    public WebElement deleteButton;
+    @FindBy(xpath="//a[contains(text(),'Edit')]")
+    public WebElement editButton;
+    @FindBy(xpath="//a[contains(text(),'Add Event')]")
+    public WebElement addEventButton;
+
+    public boolean elementVisible(WebElement element){
+     try {
+         return element.isDisplayed();
+     }catch (Exception e){
+         return false;
+     }
+
+    }
 }
