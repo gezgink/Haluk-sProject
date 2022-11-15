@@ -90,4 +90,33 @@ public class FilterMenu_StepDefinitions {
         Assert.assertEquals("Tags", actual);
     }
 
+    @When("MFGthe user clicks on the Driver, Location and Chassis Number")
+    public void mf_gthe_user_clicks_on_the_driver_location_and_chassis_number() {
+        filterMenuPage.driver.click();
+        filterMenuPage.location.click();
+        filterMenuPage.chassisNumber.click();
+        BrowserUtils.waitFor(2);
+    }
+
+    @Then("MFGDriver, Location and Chassis Number should be selected")
+    public void mfg_driver_location_and_chassis_number_should_be_selected() {
+        Assert.assertTrue(filterMenuPage.driver.isSelected());
+        Assert.assertTrue(filterMenuPage.location.isSelected());
+        Assert.assertTrue(filterMenuPage.chassisNumber.isSelected());
+
+    }
+
+    @When("MFGthe user clicks on the reset icon, under the Fleet-Vehicles module")
+    public void mf_gthe_user_clicks_on_the_reset_icon_under_the_fleet_vehicles_module() {
+        filterMenuPage.resetIcon.click();
+        BrowserUtils.waitFor(3);
+    }
+
+    @Then("MFGthe user can remove all filters \\(Driver, Location and Chassis Number should be non selected)")
+    public void mf_gthe_user_can_remove_all_filters_driver_location_and_chassis_number_should_be_non_selected() {
+        Assert.assertFalse(filterMenuPage.driver.isSelected());
+        Assert.assertFalse(filterMenuPage.location.isSelected());
+        Assert.assertFalse(filterMenuPage.chassisNumber.isSelected());
+    }
+
 }
