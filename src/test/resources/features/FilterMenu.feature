@@ -22,7 +22,7 @@ Feature: Store manager and sales manager should be able to filter menu
     And MFGthe user clicks on the filter icon
     And MFGthe user clicks on the Manage Filters menu
     And MFGthe user clicks on the Tags
-    Then MFGtags should be selected
+    Then MFGtags should be selected.
 
     Examples:
       | usertype       |

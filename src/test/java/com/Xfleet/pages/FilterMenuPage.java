@@ -32,5 +32,4 @@ public class FilterMenuPage extends BasePage {
     @FindBy(xpath = "(//label/span)[2]")
     public WebElement typeTags;
 
-
 }

@@ -89,4 +89,5 @@ public class FilterMenu_StepDefinitions {
         String actual = filterMenuPage.typeTags.getText();
         Assert.assertEquals("Tags", actual);
     }
+
 }
