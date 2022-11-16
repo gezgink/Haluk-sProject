@@ -11,25 +11,29 @@ public class FilterMenuPage extends BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//h1[@class='oro-subtitle']")
-    public WebElement dashboard;
-
-    @FindBy(xpath = "//a[@title='Filters']")
-    public WebElement filterIcon;
-
     @FindBy(xpath = "//a[@class='add-filter-button']")
     public WebElement manageFilters;
 
     @FindBy(xpath = "(//input[@name='multiselect_0'])[2]")
     public WebElement tags;
 
-    @FindBy(xpath = "//h3")
-    public WebElement loading;
-
     @FindBy(xpath = "//input[@type='search']")
     public WebElement searchManage;
 
     @FindBy(xpath = "(//label/span)[2]")
     public WebElement typeTags;
+
+    @FindBy(xpath = "(//input[@name='multiselect_0'])[3]")
+    public WebElement driver;
+
+    @FindBy(xpath = "(//input[@name='multiselect_0'])[4]")
+    public WebElement location;
+
+    @FindBy(xpath = "(//input[@name='multiselect_0'])[5]")
+    public WebElement chassisNumber;
+
+    @FindBy(xpath = "//a[@class='action btn reset-action mode-text-only']")
+    public WebElement resetIcon;
+
 
 }
