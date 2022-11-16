@@ -30,7 +30,6 @@ public class DriverFilter_StepDefinitions {
         driverFilterPage.navigateToModule(fleet,vechiles);
     }
 
-
     /*
     @And("the user click on the Filters icon")
         public void FLTAP_1018theUserClickOnTheFiltersIcon() {
@@ -60,6 +59,7 @@ public class DriverFilter_StepDefinitions {
             BrowserUtils.scrollToElement(Driver.getDriver().findElement(By.xpath(filterLocate)));
             Driver.getDriver().findElement(By.xpath(filterLocate)).click();
         } catch (Exception e) {
+            BrowserUtils.waitFor(2);
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(filterLocate)),  10);
             // BrowserUtils.waitForStaleElement(Driver.getDriver().findElement(By.xpath(filterLocate)));
             //  BrowserUtils.clickWithWait(By.xpath(filterLocate), 5);
@@ -251,6 +251,7 @@ public class DriverFilter_StepDefinitions {
     */
     @And("SAuser see that the results does not contain the specified {string}")
     public void sauserSeeThatTheResultsDoesNotContainTheSpecified(String keyword) {
+        BrowserUtils.waitFor(2);
         List<String>actualDriverList=driverFilterPage.getAllDriverInfo(driverFilterPage.driverPageNumber);
         boolean check=true;
 
@@ -358,7 +359,6 @@ public class DriverFilter_StepDefinitions {
             System.out.println(keyword);
 
         }
-
 
         Assert.assertTrue(check);
     }
