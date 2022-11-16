@@ -10,11 +10,11 @@ Feature:
     And SAthe user click on the Filters icon
     And SAthe user go to Manage filter and clicks Driver
 
-  @AC1
+  @FLTAP-1107
   Scenario: The user can select "Driver" filter under 'Fleet-Vehicles' module
     When SAthe user can select Driver filter
 
-  @AC2
+  @FLTAP-1108
   Scenario: "Driver" filter should provide the methods
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu
@@ -29,7 +29,7 @@ Feature:
       | Is Empty         |
       | Is Not Empty     |
 
-  @AC3
+  @FLTAP-1109
   Scenario Outline: When user selects "Contains" method with a keyword, the results should contain the specified keyword
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu
@@ -45,7 +45,7 @@ Feature:
       | riNa    |
 
 
-  @AC4
+  @FLTAP-1110
   Scenario Outline: When user selects "Does Not Contain" method with a keyword, the results should not contain the specified keyword
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu
@@ -59,7 +59,7 @@ Feature:
       | ?Er     |
       | riNA    |
 
-  @AC5
+  @FLTAP-1111
   Scenario Outline: When user selects "Starts-with" method with a keyword, the results should start with the specified keyword
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu
@@ -74,7 +74,7 @@ Feature:
       | Mr.     |
       | Miss    |
 
-  @AC6
+  @FLTAP-1112
   Scenario Outline: When user selects "Starts-with" method with a keyword, the results should start with the specified keyword
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu
@@ -88,7 +88,7 @@ Feature:
       | Hickle  |
       | ton     |
 
-  @AC7
+  @FLTAP-1113
   Scenario Outline: When user selects "Starts-with" method with a keyword, the results should start with the specified keyword
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu
@@ -99,9 +99,9 @@ Feature:
     Examples:
       | keyword               |
       | Dr. Michelina Bradtke |
-      | Viola ScHAefer        |
+      | Long Boyer            |
 
-  @AC8
+  @FLTAP-1114
   Scenario Outline: Methods  ("Contains", "Does Not Contains", "Starts With", "Ends With", "Is Equal to") shouldn't accept non-alphabetical characters
     When SAthe user clicks Driver filter
     And SAthe user clicks opened dropdown menu

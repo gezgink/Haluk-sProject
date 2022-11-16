@@ -72,8 +72,9 @@ public class DriverFilterPage extends BasePage {
 
 
         for(int i=0; i<pageNumber; i++) {
-            BrowserUtils.waitFor(3);
+            BrowserUtils.waitFor(4);
             List<String> driverList = BrowserUtils.getElementsText(driverName);
+            BrowserUtils.waitFor(2);
             for (String each : driverList) {
                 if(each!=null)
                     allDriver.add(each);
