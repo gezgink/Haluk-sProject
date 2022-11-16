@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@FLTAP-1014", ] ,
+        labels:  [ "@AC1",  "@FLTAP-1018", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00, ] 
+                data:  [ 100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00, ] 
             }
         ]
     };
@@ -133,7 +133,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>11 Nov 2022, 17:51</td>
+      <td>16 Nov 2022, 15:02</td>
     </tr>
   </tbody>
 </table>
@@ -195,20 +195,37 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_2566859665.html">@FLTAP-1014</a></td>
+        <td class="tagname"><a href="report-tag_2149454862.html">@AC1</a></td>
 
-        <td      class="passed"    >2</td>
+        <td      class="passed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">2</td>
+        <td class="total">1</td>
 
         <td  class="passed"    >1</td>
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="16887305600">16.887</td>
+        <td class="duration" data-value="2098892000">2.098</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2566859669.html">@FLTAP-1018</a></td>
+
+        <td      class="passed"    >1</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2098892000">2.098</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -223,12 +240,12 @@ $(document).ready(function() {
       <td>0</td>
       <td>2</td>
 
-      <td>1</td>
+      <td>2</td>
       <td>0</td>
-      <td>1</td>
+      <td>2</td>
 
-      <td class="duration">16.887</td>
-      <td>1</td>
+      <td class="duration">4.197</td>
+      <td>2</td>
     </tr>
     <tr>
       <td></td>
