@@ -45,4 +45,4 @@ Feature: Default
 	#*8-* Methods  ("Contains", "Does Not Contains", "Starts With", "Ends With", "Is Equal to") shouldn't accept non-alphabetical characters 
 	@FLTAP-1107
 	Scenario: US011 - TC01 The user can select "Driver" filter under 'Fleet-Vehicles' module
-		When the user can select Driver filter
+		When SAthe user can select Driver filter
